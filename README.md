@@ -1,5 +1,5 @@
 # monitor5
-Sinumerik an Sinamics monitor, Step7 scope
+Sinumerik and Sinamics monitor, Step7 scope
 
 
 Project build on Qt5, using Snap7 (by Davide Nardella).
