@@ -96,7 +96,7 @@
 <!-- END Header Area ... -->
 <!-- START Menu Bar ... -->
 <ul class="menubar">
-  <li><a href="http://monitor5.000webhostapp.com/index_ro.html">Acasa</a></li>
+  <li><a href="http://alxcor.github.io/index_ro.html">Acasa</a></li>
   <li><a class="active" href="index_ro.html">Monitor5</a></li>
   <li><a href="download/Monitor5.zip">Download</a></li>
   <li><a href="area_840d_func.html">English</a></li>
@@ -139,15 +139,68 @@ Exemplu: Pornirea racirii sculei aflate in arbore: comanda este scrisa in progra
 <br>
 Using M functions is the most common way to transfer binary commands from NC to PLC.<br>
 <br>
-Decoding M functions in the PLC:<br>
-With Sinumerik 840, there are 3 methods to decode the M functions in PLC.<br><br>
-<b>1. Direct decoding (Quick M functions)</b><br><br>
-The most simple method to decode M functions is to use the direct decode signals from 'Channel DB' in PLC.<br>
-Each bit is set for a single PLC cycle.<br>
-Only first 99 functions are decoded.<br>
-The M function index is not decoded.<br>
+Decodificarea functiilor M in PLC:<br>
+La Sinumerik 840 sunt disponibile 3 metode de decodificare a functiilor M in PLC.<br><br>
+<b>1. Decodificare directa (Functii M rapide - Quick M functions)</b><br><br>
+Cea mai simpla metode de decodificare a functiilor M este utilizarea semnalelor decodificate direct din blocul DB 'Channel DB' din PLC.<br>
+Fiecare bit este setat pentru un singur ciclu PLC.<br>
+Sunt decodificare doar primele 99 de functii.<br>
+Indexul functiei M nu este decodificat (se ignora).<br>
 
-
-
+<a href="area_840d.html#mfctcalc">In tab-ul 'Aria 840' din programul Monitor5 puteti gasi un mic calculator pentru bit si o functie de monitorizare online a starii acestuia.</a><br>
+<img alt="Functii M rapide" src="images/area_840f_m1.png" style="width:100%; max-width:737px">
+<br><br>
+<a id="m_fct2"><b>2. Decodificare utilizand o Lista de Functii (DB75, DB76)</b></a><br><br>
+O alta metode de decodificare a functiilor M in PLC o reprezinta utilizarea unei Liste de Functii.<br>
+Metoda a fost foarte populara in anii '90 dar este rar utilizata acum.<br>
+Conditie preliminara:<br>
+Trebuie sa fie activata in OB100, in apelul functiei FB1, DB7:
+&nbsp;&nbsp;&nbsp;CALL FB 1, DB7<br>
+&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;ListMDecGrp := ___ //numarul de grupuri de functii de decodificat, max. 16 grupuri<br>
+&nbsp;&nbsp;&nbsp;...<br>
+<br>
+<i><b>Sfat pentru service:</b> Daca in OB100, in apelul functiei FB1 gasiti ListMDecGrp > 0 si blocurile DB75 si DB76 sunt prezente in PLC, pe masina este utilizata aceasta metoda de decodificare a functiilor M.</i><br>
+<br>
+DB75 este creat utilizand un sablon / template din Sinumerik Toolbox.<br>
+Structura este:<br>
+<b>MSigGrp[1].MExtAdr</b> INT <i>//Extensia functiilor M pentru Grupul 1</i><br>
+<b>MSigGrp[1].MFirstAdr</b> DINT <i>//numărul primei funcții M pentru Grupul 1</i><br>
+<b>MSigGrp[1].MLastAdr</b> DINT <i>//numărul ultimei funcții M pentru Grupul 1</i><br>
+...<br>
+<b>MSigGrp[n].MExtAdr</b> INT <i>//extensia functiei M pentru Grupul n</i><br>
+<b>MSigGrp[n].MFirstAdr</b> DINT <i>//numărul primei funcții M pentru Grupul n</i><br>
+<b>MSigGrp[n].MLastAdr</b> DINT <i>//numărul ultimei funcții M pentru Grupul n</i><br>
+<br>
+Exemplu:<br>
+<img alt="Decodificare fct. M" src="images/area_840f_m2.png" style="width:100%; max-width:737px">
+<br><br>
+In DB76 bitii vor avea urmatoarea semnificatie:<br>
+<b>DBX0.0</b> M2 = 60<br>
+<b>DBX0.1</b> M2 = 61<br>
+....<br>
+<b>DBX0.7</b> M2 = 67<br>
+<b>DBX1.0</b> M2 = 68<br>
+<b>DBX1.1</b> M2 = 69<br>
+<br>
+Bitii din DB76 raman setati. Valoarile lor trebuie sa fie resetate din programul PLC scris de utilizator.<br>
+<br>
+<a id="m_fct3"><b>3. Scanare modificari ale valorilor</b></a><br><br>
+O alta metoda (probabil cea mai folosita) de decodificare a valorilor functiilor M din PLC o reprezinta scanarea 'modificarii' starii functiilor.<br>
+<b>Aceasta metoda e utilizata si de programul Monitor5.</b><br><br>
+Intr-un bloc NC pot fi apelate maximum 5 functii M.<br>
+De fiecare data cand in NC este rulat un bloc - o fraza de program piesa - in care sunt apelate functii M, in PLC, in blocul DB specific respectivului canal (Channel DB) sunt setati urmatorii biti, pentru un singur ciclu PLC.<br>
+<img alt="modificare functie M" src="images/area_840f_m3.png" style="width:100%; max-width:737px">
+<br><br>
+...iar valorile functiilor M sunt scrise in:<br>
+<img alt="modificare functie M" src="images/area_840f_m4.png" style="width:100%; max-width:737px">
+<br><br>
+'Monitor5' scaneaza starea bitilor in DB2n.DBX 58.0 ... 58.4<br><br>
+Daca DB2n.DBX58.0 = 1 => citeste numarul functiei M din DBD70 si extensia functiei M din DBW68<br>
+Daca DB2n.DBX58.1 = 1 => citeste numarul functiei M din DBD76 si extensia functiei M din DBW74<br>
+Daca DB2n.DBX58.2 = 1 => citeste numarul functiei M din DBD82 si extensia functiei M din DBW80<br>
+Daca DB2n.DBX58.3 = 1 => citeste numarul functiei M din DBD88 si extensia functiei M din DBW86<br>
+Daca DB2n.DBX58.4 = 1 => citeste numarul functiei M din DBD94 si extensia functiei M din DBW92<br>
+<br><br>
 <hr color="#004080" size="2">
 </body></html>
