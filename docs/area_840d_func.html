@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+<head><title>Monitor 5 Help</title>
+  <style>
+   * {
+    box-sizing: border-box;
+   }
+/* Logo */
+   .para1 {
+   margin-top: 5px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 14px;
+   line-height: 10px;
+   text-align: right;
+   color: #004080; }
+   .para2 { 
+   margin-top: 10px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 50px;
+   line-height: 50px;
+   text-align: left;
+   color: #303050; }
+   .para3 {
+   margin-top: -20px;
+   margin-left: 240px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 40px;
+   line-height: 35px;
+   text-align: left;
+   color: #90909F; }
+/* Bara Meniu */
+   ul.menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00000F;}
+   ul.menubar li {float: left;}
+   ul.menubar li a {
+    display: block;
+    color: #F4F4FF;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;}
+   ul.menubar li a.active {background-color: #004080;}
+   ul.menubar li.right {float: right;}
+   u1.menubar.li.dropdown {float: left; overflow: hidden;}
+   .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #F4F4FF;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;}
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #90909F;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;}
+   .dropdown-content a {
+    float: none;
+    color: #F4F4FF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;}
+   .dropdown:hover .dropdown-content {
+    display: block;}
+   .menubar a:hover, .dropdown:hover .dropbtn .dropdown-content a:hover{
+    background-color: #404040;
+   }
+   @media screen and (max-width:600px){
+    ul.menubar li, ul.menubar li.right {float: none;}
+   }
+  </style>
+</head>
+<!-- START BODY ... -->
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<!-- START Header Area ... -->
+<a name="#top"> </a>
+<div class="para1" align="center">20.03.20; Mar.2020</div>
+<div class="para2" align="center"><b>Monitor 5</b></div>
+<div class="para3" align="center"><b>help</b></div>
+<!-- hr color="#004080" size="2" -->
+<!-- END Header Area ... -->
+<!-- START Menu Bar ... -->
+<ul class="menubar">
+  <li><a href="http://monitor5.000webhostapp.com/index.html">Home</a></li>
+  <li><a class="active" href="index.html">Monitor5</a></li>
+  <li><a href="download/Monitor5.zip">Download</a></li>
+  <li><a href="area_840d_func_ro.html">Romana</a></li>
+  <li><a class="active">Help for...</a></li>
+</ul>
+<!-- END Menu Bar ... -->
+<!-- START SubMenu Bar ... -->
+<ul class="menubar" style="background-color: #808080">
+    <li><a href="connection.html">Connection</a></li>
+    <li><a href="area_840d.html">Area 840D</a></li>
+    <li><a class="active" style="background-color: #004080" href="area_840d_func.html">Area 840D Func</a></li>
+    <li><a href="area_sinamics.html">Area Sinamics</a></li>
+    <li><a href="area_graph.html">Area Graph</a></li>
+</ul>
+<!-- END SubMenu Bar ... -->
+<!-- START SubMenu2 Bar ... -->
+<ul class="menubar" style="background-color: #004080">
+    <li><a href="#m_fct1">Quick M Fct.</a></li>
+    <li><a href="#m_fct2">M Fct.with DB75,76</a></li>
+    <li><a href="#m_fct3">Scan M Fct.</a></li>
+    <li><a href="#s_fct">S Functions</a></li>
+    <li><a href="#t_fct">Tools</a></li>
+    <li><a href="#d_fct">Cutting Edges</a></li>
+    <li><a href="#h_fct">H Functions</a></li>
+</ul>
+<!-- END SubMenu2 Bar ... -->
+
+<h1>Area '840D Functions'</h1>
+<hr color="#004080" size="1">
+<img alt="Monitor5" title="Screen Overview" src="images/area_840f_0.png" style="width:100%; max-width:737px">
+
+<hr color="#004080" size="1">
+<a id="functions"><b>Monitor NC functions (NC to PLC):</b></a><br><br>
+- monitor and record all the M (Miscellaneous), S (Spindle Speed), T (Tool) functions, D (cutting edges for a tool) or H (as Integer or as Real) functions sent from a Part Program to PLC.<br>
+There are two windows so is possible to monitor simultaneous two types of functions (e.g. T and D functions) from the same Channel or from two different Channels of the NC.<br>
+<hr color="#004080" size="1">
+<a id="m_fct1"><b>M functions (NC to PLC):</b></a><br><br>
+M functions are commands, written in G Code, in the part program, but executed by the PLC.<br>
+Example: Start the cooling for the tool in main Spindle: the command is written in the part program (e.g. M07) but the valve for cooling liquid is controlled by PLC.
+<br>
+Using M functions is the most common way to transfer binary commands from NC to PLC.<br>
+<br>
+Decoding M functions in the PLC:<br>
+With Sinumerik 840, there are 3 methods to decode the M functions in PLC.<br><br>
+<b>1. Direct decoding (Quick M functions)</b><br><br>
+The most simple method to decode M functions is to use the direct decode signals from 'Channel DB' in PLC.<br>
+Each bit is set for a single PLC cycle.<br>
+Only first 99 functions are decoded.<br>
+The M function index is not decoded.<br>
+<a href="area_840d.html#mfctcalc">A small calculator for the bit and a monitoring function is available in 'Area 840' of Monitor5 program.</a><br>
+<img alt="Quick M functions" src="images/area_840f_m1.png" style="width:100%; max-width:737px">
+<br><br>
+<a id="m_fct2"><b>2. Decoding using a List of Functions (DB75, DB76)</b></a><br><br>
+Another method for decoding M function in PLC is using a List of Functions.<br>
+This method was very popular in the '90s but is rarely used now.<br>
+Precondition:<br>
+Must be activated in OB100, in FB1, DB7 call:
+&nbsp;&nbsp;&nbsp;CALL FB 1, DB7<br>
+&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;ListMDecGrp := ___ //number of decoded function groups, max. 16 groups<br>
+&nbsp;&nbsp;&nbsp;...<br>
+<br>
+<i><b>Hint for service:</b> If in OB100, in FB1 call you see ListMDecGrp > 0 and DB75 and DB76 are present in the PLC, this method is used to decode M functions for this machine.</i><br>
+<br>
+DB75 is created using a template from Sinumerik Toolbox.<br>
+The struncture is:<br>
+<b>MSigGrp[1].MExtAdr</b> INT <i>//1st M function extension</i><br>
+<b>MSigGrp[1].MFirstAdr</b> DINT <i>//numărul primei funcții M</i><br>
+<b>MSigGrp[1].MLastAdr</b> DINT <i>//numărul ultimei funcții M</i><br>
+...<br>
+<b>MSigGrp[n].MExtAdr</b> INT <i>//extensia functiei M</i><br>
+<b>MSigGrp[n].MFirstAdr</b> DINT <i>//numărul primei funcții M</i><br>
+<b>MSigGrp[n].MLastAdr</b> DINT <i>//numărul ultimei funcții M</i><br>
+<br>
+Example:<br>
+<img alt="Decode M fct." src="images/area_840f_m2.png" style="width:100%; max-width:737px">
+<br><br>
+In DB76 the bits will have the following meaning:<br>
+<b>DBX0.0</b> M2 = 60<br>
+<b>DBX0.1</b> M2 = 61<br>
+....<br>
+<b>DBX0.7</b> M2 = 67<br>
+<b>DBX1.0</b> M2 = 68<br>
+<b>DBX1.1</b> M2 = 69<br>
+<br>
+Bits in DB76 remain set. Their value must be reseted by the custom PLC program.<br>
+<br>
+<a id="m_fct3"><b>3. Scan the modified values</b></a><br><br>
+Another method for decoding M function in PLC is using a scan for 'modified' status of the functions.<br>
+<b>This method is used also by Monitor5 program.</b><br><br>
+Into an NC block is possible to have a maximum of 5 calls for M functions.<br>
+Eack time a block with M fct. call is running in NC, the following bits are set, for a single PLC cycle, in Channel DB in the PLC.<br>
+<img alt="M function change" src="images/area_840f_m3.png" style="width:100%; max-width:737px">
+<br><br>
+...and the function value is written in:<br>
+<img alt="M function change" src="images/area_840f_m4.png" style="width:100%; max-width:737px">
+<br><br>
+'Monitor5' is scanning the bits in DB2n.DBX 58.0 ... 58.4<br><br>
+If DB2n.DBX58.0 = 1 => read M function number from DBD70 and M fct. extension from DBW68<br>
+If DB2n.DBX58.1 = 1 => read M function number from DBD76 and M fct. extension from DBW74<br>
+If DB2n.DBX58.2 = 1 => read M function number from DBD82 and M fct. extension from DBW80<br>
+If DB2n.DBX58.3 = 1 => read M function number from DBD88 and M fct. extension from DBW86<br>
+If DB2n.DBX58.4 = 1 => read M function number from DBD94 and M fct. extension from DBW92<br>
+<br><br>
+<hr color="#004080" size="2">
+</body></html>

@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+<head><title>Monitor 5 Help</title>
+  <style>
+   * {
+    box-sizing: border-box;
+   }
+/* Logo */
+   .para1 {
+   margin-top: 5px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 14px;
+   line-height: 10px;
+   text-align: right;
+   color: #004080; }
+   .para2 { 
+   margin-top: 10px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 50px;
+   line-height: 50px;
+   text-align: left;
+   color: #303050; }
+   .para3 {
+   margin-top: -20px;
+   margin-left: 240px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 40px;
+   line-height: 35px;
+   text-align: left;
+   color: #90909F; }
+/* Bara Meniu */
+   ul.menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00000F;}
+   ul.menubar li {float: left;}
+   ul.menubar li a {
+    display: block;
+    color: #F4F4FF;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;}
+   ul.menubar li a.active {background-color: #004080;}
+   ul.menubar li.right {float: right;}
+   u1.menubar.li.dropdown {float: left; overflow: hidden;}
+   .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #F4F4FF;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;}
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #90909F;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;}
+   .dropdown-content a {
+    float: none;
+    color: #F4F4FF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;}
+   .dropdown:hover .dropdown-content {
+    display: block;}
+   .menubar a:hover, .dropdown:hover .dropbtn .dropdown-content a:hover{
+    background-color: #404040;
+   }
+   @media screen and (max-width:600px){
+    ul.menubar li, ul.menubar li.right {float: none;}
+   }
+/* Coloana: latime variabila */
+   .coloana {
+    float: left;
+    width: auto;
+    padding: 10px;}
+/* Rand; curat 'float' dupa coloane */
+   .rand {
+   height: auto; overflow: hidden;}
+   .rand:after {
+    content: "";
+    display: table;
+    clear: both;}
+  </style>
+</head>
+<!-- START BODY ... -->
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<!-- START Header Area ... -->
+<a name="#top"> </a>
+<div class="para1" align="center">20.03.20; Mar.2020</div>
+<div class="para2" align="center"><b>Monitor 5</b></div>
+<div class="para3" align="center"><b>help</b></div>
+<!-- hr color="#004080" size="2" -->
+<!-- END Header Area ... -->
+<!-- START Menu Bar ... -->
+<ul class="menubar">
+  <li><a href="http://monitor5.000webhostapp.com/index.html">Home</a></li>
+  <li><a class="active" href="index.html">Monitor5</a></li>
+  <li><a href="download/Monitor5.zip">Download</a></li>
+  <li><a href="area_sinamics_ro.html">Romana</a></li>
+  <li><a class="active">Help for...</a></li>
+</ul>
+<!-- END Menu Bar ... -->
+<!-- START SubMenu Bar ... -->
+<ul class="menubar" style="background-color: #808080">
+    <li><a href="connection.html">Connection</a></li>
+    <li><a href="area_840d.html">Area 840D</a></li>
+    <li><a href="area_840d_func.html">Area 840D Func</a></li>
+    <li><a class="active" style="background-color: #004080" href="area_sinamics.html">Area Sinamics</a></li>
+    <li><a href="area_graph.html">Area Graph</a></li>
+</ul>
+<!-- END SubMenu Bar ... -->
+<!-- START SubMenu2 Bar ... -->
+<ul class="menubar" style="background-color: #004080">
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#objnum">Object Number</a></li>
+    <li><a href="#status">Status</a></li>
+</ul>
+<!-- END SubMenu2 Bar ... -->
+<h1>Area Sinamics</h1>
+<hr color="#004080" size="1">
+<a id="settings"><b>Connection, Interfaces:</b></a><br>
+<div class="rand">
+ <div class="coloana">
+  <img alt="Sinamics interfaces" src="images/area_s120_ig.png" style="max-width:444px; width:75%">
+ </div>
+ <div class="coloana" style="float:none">
+  <b>G120:</b><br>
+  Locate the Profinet interface<br>
+  You may need to find out the Ethernet address using another software (Starter, StartDrive, TIA Portal, etc).<br>
+  Rack: 0<br>
+  Slot: any<br>
+ </div>
+</div>
+<div class="rand">
+ <div class="coloana">
+  <img alt="Sinamics interfaces" src="images/area_s120_is.png" style="max-width:444px; width:75%">
+ </div>
+ <div class="coloana" style="float:none">
+  <b>S120:</b><br>
+  You may use X127 (Ethernet Service Interface) or any Profinet interface if available<br>
+  You may need to find out the Ethernet address using another software (Starter, StartDrive, TIA Portal, etc).<br>
+  Rack: 0<br>
+  Slot: any<br>
+ </div>
+</div>
+<hr color="#004080" size="1">
+<a id="objnum"><b>Object number:</b></a><br><br>
+<div class="rand">
+ <div class="coloana">
+  <img alt="G120" src="images/area_s120_g120.png" style="max-width:444px; width:75%">
+ </div>
+ <div>
+  For single drives (such as Sinamics G120, G120D, G120C, G120X, etc.) the object number is not relevant.<br>
+  The Control Unit is connected to the Power Module and together are a Drive Object: a system with the capability to control the motor, save parameters, receive commands, etc.
+ </div>
+</div>
+<div class="rand">
+ <div class="coloana">
+  <img alt="S120" src="images/area_s120_s120.png" style="max-width:444px; width:75%">
+ </div>
+ <div>
+  Drive systems with modular architecture, such as Sinamics S120, have a more complex architecture.<br>
+  Various components are linked, via DC-Link Busbar and via Drive-Cliq interface system to control one or more motors.<br>
+  In such a system the motor is not controled by a single piece of hardware, as in a 'Single Drive', more linked components are needed to control the motor.<br><br>
+  Example:<br>
+  in the left picture is represented a modular system controlling 3 motors.<br>
+  - 1st module (the small one from the left) is the Control Unit<br>
+  - 2nd module is the Line Module: a rectifier that converts the alternate current from the mains into direct current.<br>
+  - 3rd module is a Double Motor Module: two inverters modulating the direct current from the Line Module into alternate current used to control the motors.<br>
+  - 4th module is a Single Motor Module: an inverter modulating the direct current from the Line Module into alternate current used to control the motor.<br>
+ </div>
+</div>
+<div class="rand">
+ <div class="coloana">
+  <img alt="S120" src="images/area_s120_s121.png" style="max-width:444px; width:75%">
+ </div>
+ <div>
+  <b>(1)</b> In Sinamics S120 systems, the Control Unit is considered a Drive Object. <br>In our example it will be the first Object.<br>
+  <br>
+  <b>(2)</b> A modular system needs a rectifier module. Some rectifiers such as Active Line Module have parameters and are considered a Drive Object in the system.<br>In our example the Active Line Module (rectifier) is the 2nd Object.<br>
+  <br>
+  <b>(3)</b> and <b>(4)</b> A double Motor Module has two independent inverter bridges, each one capable to supply the AC voltage for a motor. Each inverter has it's own parameters and, together with the motor, the motor encoder and the encoder electronics (such as a Sensor Module) are Drive Objects.<br>In our example, Drive Object <b>(3)</b> is constituted from the first inverter of the Double Motor Module, the first motor and any encoder electronics present.<br>
+  Drive Object <b>(4)</b> is constituted from the second inverter of the Double Motor Module, the second motor and any encoder electronics present.<br>
+  <br>
+  <b>(5)</b> Drive Object <b>(5)</b> is constituted form the last Motor Module, the last motor and the encoder electronics.<br>
+ </div>
+</div>
+<hr color="#004080" size="1">
+<a id="status"> </a>
+<div class="rand">
+ <div class="coloana">
+  <img alt="Drive Object" src="images/area_s120_1a.png" style="max-width:444px; width:75%">
+ </div>
+ <div>
+  <b>Drive Object selection</b><br>
+  Select the Drive Object number.<br>
+  The value of parameter r975.1, Drive Object Identification, is displayed on the line under the Drive Object number.
+ </div>
+</div>
+<br><br>
+<hr color="#004080" size="2">
+</body></html>

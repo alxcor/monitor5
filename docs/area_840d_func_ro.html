@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+<head><title>Monitor 5 Help</title>
+  <style>
+   * {
+    box-sizing: border-box;
+   }
+/* Logo */
+   .para1 {
+   margin-top: 5px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 14px;
+   line-height: 10px;
+   text-align: right;
+   color: #004080; }
+   .para2 { 
+   margin-top: 10px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 50px;
+   line-height: 50px;
+   text-align: left;
+   color: #303050; }
+   .para3 {
+   margin-top: -20px;
+   margin-left: 240px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 40px;
+   line-height: 35px;
+   text-align: left;
+   color: #90909F; }
+/* Bara Meniu */
+   ul.menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00000F;}
+   ul.menubar li {float: left;}
+   ul.menubar li a {
+    display: block;
+    color: #F4F4FF;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;}
+   ul.menubar li a.active {background-color: #004080;}
+   ul.menubar li.right {float: right;}
+   u1.menubar.li.dropdown {float: left; overflow: hidden;}
+   .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #F4F4FF;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;}
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #90909F;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;}
+   .dropdown-content a {
+    float: none;
+    color: #F4F4FF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;}
+   .dropdown:hover .dropdown-content {
+    display: block;}
+   .menubar a:hover, .dropdown:hover .dropbtn .dropdown-content a:hover{
+    background-color: #404040;
+   }
+   @media screen and (max-width:600px){
+    ul.menubar li, ul.menubar li.right {float: none;}
+   }
+  </style>
+</head>
+<!-- START BODY ... -->
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<!-- START Header Area ... -->
+<a name="#top"> </a>
+<div class="para1" align="center">20.03.20; Mar.2020</div>
+<div class="para2" align="center"><b>Monitor 5</b></div>
+<div class="para3" align="center"><b>help</b></div>
+<!-- hr color="#004080" size="2" -->
+<!-- END Header Area ... -->
+<!-- START Menu Bar ... -->
+<ul class="menubar">
+  <li><a href="http://monitor5.000webhostapp.com/index_ro.html">Acasa</a></li>
+  <li><a class="active" href="index_ro.html">Monitor5</a></li>
+  <li><a href="download/Monitor5.zip">Download</a></li>
+  <li><a href="area_840d_func.html">English</a></li>
+  <li><a class="active">Ajutor pentru...</a></li>
+</ul>
+<!-- END Menu Bar ... -->
+<!-- START SubMenu Bar ... -->
+<ul class="menubar" style="background-color: #808080">
+    <li><a href="connection_ro.html">Conectare</a></li>
+    <li><a href="area_840d_ro.html">Aria 840D</a></li>
+    <li><a class="active" style="background-color: #004080" href="area_840d_func_ro.html">Aria 840D Func</a></li>
+    <li><a href="area_sinamics_ro.html">Aria Sinamics</a></li>
+    <li><a href="area_graph_ro.html">Aria Graph</a></li>
+</ul>
+<!-- END SubMenu Bar ... -->
+<!-- START SubMenu2 Bar ... -->
+<ul class="menubar" style="background-color: #004080">
+    <li><a href="#m_fct1">Fct. M rapid.</a></li>
+    <li><a href="#m_fct2">Fct.M cu DB75,76</a></li>
+    <li><a href="#m_fct3">Scan Fct.M</a></li>
+    <li><a href="#s_fct">Functii S</a></li>
+    <li><a href="#t_fct">Scule</a></li>
+    <li><a href="#d_fct">Taisuri</a></li>
+    <li><a href="#h_fct">Functii H</a></li>
+</ul>
+<!-- END SubMenu2 Bar ... -->
+
+<h1>Aria '840D Func'</h1>
+<hr color="#004080" size="1">
+<img alt="Monitor5" title="Screen Overview" src="images/area_840df_0.png" style="width:100%; max-width:737px">
+
+<hr color="#004080" size="1">
+<a id="functions"><b>Monitorizare Functii NC (NC catre PLC):</b></a><br><br>
+- monitorizeaza si inregistreaza toate functiile M (Miscellaneous), S (Turatii arbori / Spindle Speed), T (Scule / Tool), D (taisuri pentru o scula / cutting edges for a tool) sau H (ca valori Intregi sau Reale), functii programate intr-un program piesa si transmise catre PLC.<br>
+Sunt disponibile doua ferestre de monitorizare astfel incat este posibila monitorizarea simultana a doua tipuri de functii (de ex. functii T si D) din acelasi Canal sau din Canale diferite ale NC.<br>
+<hr color="#004080" size="1">
+<a id="m_fct1"><b>Functii M (NC catre PLC):</b></a><br><br>
+Functiile M sunt comenzi scrise in cod G, in programul piesa, dar executate de catre PLC.<br>
+Exemplu: Pornirea racirii sculei aflate in arbore: comanda este scrisa in programul piesa (de exemplu M07) dar electro-ventilul ce controleaza curgerea lichidului de racire este comandat din iesirile PLC.
+<br>
+Using M functions is the most common way to transfer binary commands from NC to PLC.<br>
+<br>
+Decoding M functions in the PLC:<br>
+With Sinumerik 840, there are 3 methods to decode the M functions in PLC.<br><br>
+<b>1. Direct decoding (Quick M functions)</b><br><br>
+The most simple method to decode M functions is to use the direct decode signals from 'Channel DB' in PLC.<br>
+Each bit is set for a single PLC cycle.<br>
+Only first 99 functions are decoded.<br>
+The M function index is not decoded.<br>
+
+
+
+<hr color="#004080" size="2">
+</body></html>

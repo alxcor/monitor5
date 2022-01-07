@@ -1,0 +1,994 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+<head><title>Monitor 5 Help</title>
+  <style>
+   * {
+    box-sizing: border-box;
+   }
+/* Logo */
+   .para1 {
+   margin-top: 5px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 14px;
+   line-height: 10px;
+   text-align: right;
+   color: #004080; }
+   .para2 { 
+   margin-top: 10px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 50px;
+   line-height: 50px;
+   text-align: left;
+   color: #303050; }
+   .para3 {
+   margin-top: -20px;
+   margin-left: 240px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 40px;
+   line-height: 35px;
+   text-align: left;
+   color: #90909F; }
+/* Bara Meniu */
+   ul.menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00000F;}
+   ul.menubar li {float: left;}
+   ul.menubar li a {
+    display: block;
+    color: #F4F4FF;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;}
+   ul.menubar li a.active {background-color: #004080;}
+   ul.menubar li.right {float: right;}
+   u1.menubar.li.dropdown {float: left; overflow: hidden;}
+   .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #F4F4FF;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;}
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #90909F;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;}
+   .dropdown-content a {
+    float: none;
+    color: #F4F4FF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;}
+   .dropdown:hover .dropdown-content {
+    display: block;}
+   .menubar a:hover, .dropdown:hover .dropbtn .dropdown-content a:hover{
+    background-color: #404040;
+   }
+   @media screen and (max-width:600px){
+    ul.menubar li, ul.menubar li.right {float: none;}
+   }
+/* Coloana: latime variabila */
+   .coloana {
+    float: left;
+    width: auto;
+    padding: 10px;}
+/* Rand; curat 'float' dupa coloane */
+   .rand {
+   height: auto; overflow: hidden;}
+   .rand:after {
+    content: "";
+    display: table;
+    clear: both;}
+  </style>
+</head>
+<!-- START BODY ... -->
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<!-- START Header Area ... -->
+<a name="#top"> </a>
+<div class="para1" align="center">20.03.20; Mar.2020</div>
+<div class="para2" align="center"><b>Monitor 5</b></div>
+<div class="para3" align="center"><b>help</b></div>
+<!-- hr color="#004080" size="2" -->
+<!-- END Header Area ... -->
+<!-- START Menu Bar ... -->
+<ul class="menubar">
+  <li><a href="http://monitor5.000webhostapp.com/index.html">Home</a></li>
+  <li><a class="active" href="index.html">Monitor5</a></li>
+  <li><a href="download/Monitor5.zip">Download</a></li>
+  <li><a href="area_840d_ro.html">Romana</a></li>
+  <li><a class="active">Help for...</a></li>
+</ul>
+<!-- END Menu Bar ... -->
+<!-- START SubMenu Bar ... -->
+<ul class="menubar" style="background-color: #808080">
+    <li><a href="connection.html">Connection</a></li>
+    <li><a class="active" style="background-color: #004080" href="area_840d.html">Area 840D</a></li>
+    <li><a href="area_840d_func.html">Area 840D Func</a></li>
+    <li><a href="area_sinamics.html">Area Sinamics</a></li>
+    <li><a href="area_graph.html">Area Graph</a></li>
+</ul>
+<!-- END SubMenu Bar ... -->
+<!-- START SubMenu2 Bar ... -->
+<ul class="menubar" style="background-color: #004080">
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#alarmcalc">Alarm Calculator</a></li>
+    <li><a href="#mfctcalc">Quick M Func.</a></li>
+    <li><a href="#fstiocalc">Fast NCK I/O</a></li>
+    <li><a href="#online">Online monitoring</a></li>
+</ul>
+<!-- END SubMenu2 Bar ... -->
+<h1>Area '840D'</h1>
+<hr color="#004080" size="1">
+<img alt="Monitor5" title="Screen Overview" src="images/area_840d_0.png" style="width:100%; max-width:737px">
+<hr color="#004080" size="1">
+
+<a id="settings"><h2>Standard Settings (according to the connected NCU interface):</h2></a><br>
+<div class="rand">
+ <div class="coloana">
+  <img alt="840D interfaces" title="840D interfaces" src="images/area_840d_interf.png" style="max-width:444px; width:75%">
+ </div>
+ <div class="coloana" style="float:none">
+<b>X127: (Service Interface)</b><br>
+Address: 192.168.215.1<br>
+Rack: 0<br>
+Slot: 2<br><br><br><br>
+<b>X120: (System Network)</b><br>
+Address: 192.168.214.1<br>
+Rack: 0<br>
+Slot: 2<br><br><br><br>
+<b>X130: (Company Network)</b><br>
+Address: set by network administrator<br>
+Rack: 0<br>
+Slot: 2<br>
+ </div>
+</div>
+<hr color="#004080" size="1">
+
+<a id="offline"><h2>Offline Functions:</h2></a><br>
+Some functions of this program may be used offline.<br><br>
+<hr color="#004080" size="1">
+<a id="alarmcalc"><h2>Alarm Calculator:</h2></a><br>
+<img src="images/area_840d_alm.png" style="max-width:577px; width:100%">
+<br>
+1. Enter an Alarm number in the 'Alarm' field and press ENTER. Corresponding bit from DB2 is calculated in 'DB2 bit'.<br>
+&nbsp;&nbsp;&nbsp;Examples: 510008, 700040, etc<br>
+2. Enter a bit number from DB2 in 'DB2 bit' field and press ENTER. Corresponding Alarm number is calculated in 'Alarm' field.<br>
+&nbsp;&nbsp;&nbsp;Examples: DB2.DBX185.5 or DBX185.5 or 185.5<br>
+<br><br>
+<b>Note:</b> When Connected, bit status (Alarm SET or Alarm NOT SET) is displayed and may be changed online with 'Set Bit' and 'Reset bit' buttons.<br>
+<img src="images/area_840d_alm_0.png">
+<br><br>
+<hr color="#004080" size="1">
+<a id="mfctcalc"><h2>M Function Calculator:</h2></a><br>
+<img src="images/area_840d_mfc.png" style="max-width:577px; width:100%">
+<br>
+<b>Note:</b> This function calculate only the 'Fast M decode' bits in Channel DB area from PLC. Only M0 to M99 are decoded, without extension. A full monitoring of M functions bits is available in '840D Func' Area.<br>For more information on decoding M function bits in PLC see the corresponding help.<br><br>
+1. Enter the Channel number in 'Chan' field and M function number in 'M fct.' field. Both DB number and bit number are calculated in 'bit' field.<br>
+&nbsp;&nbsp;&nbsp;Examples: 'Chan:' 1 and 'M fct:' 3 or 'Chan:' 1 and 'M fct:' M3<br>
+2. Enter a bit number in 'bit' field and press ENTER. Corresponding M function number is calculated in 'M fct' field. If no DB number is entered, channel number is set to 0 (zero).<br>
+&nbsp;&nbsp;&nbsp;Examples: DB22.DBX198.3 or DBX198.3 (no channel number will be calculated) or 198.3  (no channel number will be calculated)<br>
+<br><br>
+<b>Note:</b> When Connected, bit status (M function SET or M function NOT SET) is displayed and may be changed online with 'Set Bit' and 'Reset bit' buttons.<br>
+<img src="images/area_840d_mfc_0.png">
+<br><br>
+<b>Note:</b> With 'Monitor' button the status change is monitored, retained and displayed even for 1-PLC-cycle changes.<br>
+<img src="images/area_840d_mfc_1.png"><br>
+To reset the status press 'Monitor' button once more.
+<br><br>
+<hr color="#004080" size="1">
+<a id="fstiocalc"><b>Fast IO Calculator:</b></a><br>
+<img src="images/area_840d_fst.png" style="max-width:577px; width:100%">
+<br>
+1. Enter an NCK Fast Input number in the 'Fast IO' field and press ENTER. Corresponding bits for 'PLC disable of the input', 'PLC set value' and 'Actual value from Hardware' from DB10 are calculated in the corresponding fields.<br>
+<br><b>Note:</b> When Connected, bit status is displayed.
+<br><br>
+<hr color="#004080" size="1">
+<a id="generic"><b>Generic Variable:</b></a><br>
+<img src="images/area_840d_gen.png" style="max-width:577px; width:100%">
+<br>
+This area is not functional.<br>
+<br><br>
+<hr color="#004080" size="1">
+<a id="online"><h2>Online Monitoring:</h2></a><br>
+<div class="rand">
+ <div class="coloana">
+  <img alt="Online view" title="Online view" src="images/area_840d_1.png" style="width:100%; max-width:600px">
+ </div>
+ <div class="coloana" style="float:none">
+   When online, some data regarding Axis status and Channel status are displayed.
+ </div>
+</div>
+<hr color="#004080" size="1">
+<br>
+<br>
+<a id="channel"> </a>
+<table border="1" cellpadding="3" cellspacing="3" width="100%"><tbody>
+  <tr>
+  <td valign="top"><b>Channel group:</b></td>
+  <td valign="top"> </td>
+  <td valign="top"> </td>
+  <td valign="top"> </td>
+  </tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_1.png"></td>
+  <td valign="top"><b>Channel Number</b><br>User...</td>
+  <td valign="top"><b>Use Up/Down Arrow from keyboard</b></td>
+  <td valign="top">Select Channel number. Function disabled if 'Link Channel' is selected on Axis group.</td>
+  </tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_2.png"></td>
+  <td valign="top"><b>Channel Status</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBch.DBX35.5 = Active<br>DBch.DBX35.6 = Interrupted<br>DBch.DBX35.7 = Reset</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top">Channel status:<br>
+  <b>Active:</b> Channel is Active, a Part Program is running or an axis is moving;<br>
+  <b>Interrupted:</b> Channel is Interrupted by:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - DBch.DBX7.3 (NC Stop)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - DBch.DBX7.4 (NC Stop axes plus spindles)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - DBch.DBX7.2 (NC Stop at the block limit)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Programmed M00 or M01<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Single-block mode<br>
+  <b>Reset:</b> Channel is in Reset mode, no action is active;<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_3.png"></td>
+  <td valign="top"><b>Program Status</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBch.DBX35.0 = Running<br>DBch.DBX35.1 = Waiting<br>DBch.DBX35.2 = Stopped<br>DBch.DBX35.3 = Interrupted<br>DBch.DBX35.4 = Aborted</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top">Program status:<br>
+  <b>Running: DBX35.0:</b> The part program was started with the interface signal DBch.DBX7.1 (NC Start) and is running.<br>
+  <b>Waiting: DBX35.1:</b> The running program is waiting for the program command WAIT_M or WAIT_E in an NC block.<br>
+  <b>Stopped: DBX35.2:</b> The NC part program has been stopped by:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - DBch.DBX7.3 (NC Stop)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - DBch.DBX7.4 (NC Stop axes plus spindles)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - DBch.DBX7.2 (NC Stop at the block limit)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Programmed M00 or M01<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Single-block mode<br>
+  <b>Interrupted: DBX35.3:</b> When the operating mode changes from AUTOMATIC or MDI (in stopped program status) to JOG, the program status changes to "Interrupted".<br>
+  <b>Aborted: DBX35.4:</b> No program is running in Channel; The program was not started, was finished with M2/M30/RET/etc or was aborted with a Reset.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_4.png"></td>
+  <td valign="top"><b>Channel Ready</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBch.DBX36.5</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top">Channel is ready:<br>
+  <b>1 = OK:</b> Channel is ready for part program processing of machine axes, geometry axes and positioning axes.<br>
+  <b>0 = NO:</b> Channel is not ready for a part program processing of machine axes, geometry axes and positioning axes.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_5.png"></td>
+  <td valign="top"><b>Channel NC Alarm</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBch.DBX36.6</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top">Channel-specific NCK alarm is active:<br>
+  <b>0 = NO:</b> No NCK alarm is active for this channel.<br>
+  <b>1 = YES:</b> At least one NCK alarm is present for this channel.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_6.png"></td>
+  <td valign="top"><b>NC Alarm</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBch.DBX36.7</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top">NCK alarm with processing stop present:<br>
+  <b>0 = NO:</b> There is no alarm active in this channel that is causing a processing stop.<br>
+  <b>1 = YES:</b> At least one NCK alarm - which is causing a processing stop of the part program running in this channel - is active<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_7.png"></td>
+  <td valign="top"><b>Reset</b><br>User->PLC</td>
+  <td valign="top"><b>DBch.DBX7.7</b></td>
+  <td valign="top">On Click: a Reset Signal is send to the Channel via DBch.DBX7.7</td>
+  </tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_8.png"></td>
+  <td valign="top"><b>Feedrate Disable:</b><br>PLC -> NC</td>
+  <td valign="top"><b>DBch.DBX6.0</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top"><b>Feed disable:</b><br>
+  <b>0 = NO: (Feed Enabled)</b> The feedrate is enabled for all axes of the channel. If a travel request ("travel command") exists for an axis or group of axes when the "feed disable" is canceled, then this is executed immediately.<br>
+  <b>1 = YES: (Feed Disabled)</b> The signal is active in one channel in all operating modes. The signal disables the feed for all of the axes (geometry and synchronized) that interpolate relative to one another as long as G33 (thread) is not active.<br>
+  All axes are brought to a standstill but still maintaining the path contour. When the feed disable is canceled (0 signal), the interrupted part program is continued.<br>
+  The signal triggers a feed disable for all positioning axes. This signal brings all traversing axes to a standstill with controlled braking (ramp stop). No alarm is output.<br>
+  The position control is retained, i.e. the following error is eliminated.<br>
+  If a travel request is issued for an axis with an active "Feed disable", then this is kept. The queued travel request is executed immediately when the "Feed disable" is canceled.<br>
+  If the axis is interpolating in relation to others, this also applies to these axes.<br>
+  <br><b>Note:</b><br>
+  In usual mode, the 'Feedrate Disable' signal is generated by FC10 (standard bloc from Siemens ToolBox Library) in the PLC program.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_9.png"></td>
+  <td valign="top"><b>Read In Disable:</b><br>PLC -> NC</td>
+  <td valign="top"><b>DBch.DBX6.1</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top"><b>Read In Disable:</b><br>
+  <b>0 = NO: (Read-In Enabled)</b> The main run reads in preprocessed part program blocks.<br>
+  <b>1 = YES: (Read-In Disabled)</b> The main run does not read in any preprocessed part program blocks.<br><br>
+  <i><b>Note:</b> The signal is only active in AUTOMATIC and MDI modes.</i><br>
+  <br><b>Note:</b><br>
+  In usual mode, the 'Read In Disable' signal is generated by FC10 (standard bloc from Siemens ToolBox Library) in the PLC program.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_a.png"></td>
+  <td valign="top"><b>Delete DTG:</b><br>PLC -> NC</td>
+  <td valign="top"><b>DBch.DBX6.2</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top"><b>Delete distance-to-go (channel-specific)</b><br>
+  <b>0 = NO:</b> No effect<br>
+  <b>1 = YES:</b> Delete distance-to-go (channel-specific):<br><br>
+  Interface Signal "Delete distance-to-go (channel-specific)" for path axes is only active in AUTOMATIC mode.<br>
+  The rising edge of the interface signal is only effective for the axes involved in the geometry grouping. These are also stopped with a ramp stop and their distance-to-go deleted (setpoint - actual value difference). Any remaining following error is still corrected. The next program block is then started.<br>
+  Interface Signal "Delete distance-to-go (channel-specific)" is therefore ignored by positioning axes.<br>
+  <b>Remark:</b> Interface Signal "Delete distance-to-go" does not influence the running dwell time in a program block with dwell time.<br><br>
+  Signal irrelevant for Positioning axes<br><br>
+  Application example: To terminate motion because of an external signal (e.g. measuring probe)<br><br>
+  Corresponding to ... DBax.DBX2.2 (delete distance-to-go (axis-specific))
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_b.png"></td>
+  <td valign="top"><b>NC-Start disable:</b><br>PLC -> NC</td>
+  <td valign="top"><b>DBch.DBX7.0</b><br><br>DBch = DB[20 + Channel Number]<br>Example: DB21 = Channel 1</td>
+  <td valign="top"><b>NC-Start disable:</b><br>
+  <b>0 = NO: (NC-Start Enabled)</b> NC Start disable is not active.<br>
+  <b>1 = YES: (NC-Start Disabled)</b> The NC Start disable prevents a part program from being started with NC START signal DBch.DBX7.1 (NC Start) == 1.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_1_c.png"></td>
+  <td valign="top"><b>Scan cycle time</b><br>Info</td>
+  <td valign="top"> </td>
+  <td valign="top">Time interval for the last read from PLC
+  </td></tr>
+</tbody>
+</table>
+<br>
+<hr color="#004080" size="1">
+<br>
+<a id="axis1"> </a>
+<table border="1" cellpadding="3" cellspacing="3" width="100%"><tbody>
+  <tr>
+  <td valign="top"><b>Axis group 1:</b></td>
+  <td valign="top"> </td>
+  <td valign="top"> </td>
+  <td valign="top"> </td>
+  </tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_2_1.png"></td>
+  <td valign="top"><b>Axis Number</b><br>User...</td>
+  <td valign="top"><b>Use Up/Down Arrow from keyboard</b></td>
+  <td valign="top">Select Axis number.</td>
+  </tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_2_2.png"></td>
+  <td valign="top"><b>Channel Number</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX68.0 = bit 0<br>DBax.DBX68.1 = bit 1<br>DBax.DBX68.2 = bit 2<br>DBax.DBX68.3 = bit 3</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">NC axis/spindle channel assignment:<br>
+  Number of the Channel to which the axis/spindle is assigned (binary code).<br><br>
+  Info from NC to PLC. For axes allocated to more than 1 channel, this is the number of the channel to which the axis is assigned in this moment.
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_2b.png"></td>
+  <td valign="top"><b>Link Channel</b><br>User</td>
+  <td valign="top"><img src="images/area_840d_2_2a.png"><b>Channel Linked</b><br><img src="images/area_840d_2_2.png"><b>Channel Not Linked</b></td>
+  <td valign="top">If 'Link Channel' is selected, the 'Channel Number' in the left box will be set automatically...<br>
+  <img src="images/area_840d_2_2a.png"> => <img src="images/area_840d_1_1.png">
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_3.png"></td>
+  <td valign="top"><b>Axis type: Axis/Spindle</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX60.0</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top"><b>Axis type:</b><br>
+  <b>0 = Axis</b> <br>
+  <b>1 = Spindle</b><br>
+  In case of a read error for axis data, 'Axis: error' is displayed here
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_4.png"></td>
+  <td valign="top"><b>Axis override:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBB0</b><br><b>DBax.DBB19</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top"><b>Note:</b> <i>the displayed value is based on 'standard' settings for Gray code override</i><br><br>
+  For axes, the override value is set from PLC to NC in DBax.DBB0.<br>
+  For Spindles ('Axis type' (DBax.DBX60.0) = 1), spindle override is set from PLC to NC from DBax.DBB19<br><br>
+  <b>Channel-specific feedrate and rapid traverse [Not implemented in Monitor5]</b><br>
+  For feedrate and rapid traverse override, dedicated enable signals and correction/offset factors are available in the NC/PLC interface:<br>
+  DB21, ... DBX6.7 (feedrate override active)<br>
+  DB21, ... DBB4 (feedrate override)<br>
+  DB21, ... DBX6.6 (rapid traverse override active)<br>
+  DB21, ... DBB5 (rapid traverse override)<br>
+  The override factors can be specified from the PLC either in the binary or gray-coded format.<br>
+  The format is communicated to the NC via the following machine data:<br>
+  MD12020 $MN_OVR_FEED_IS_GRAY_CODE (path feedrate override switch gray-coded)<br>
+  MD12040 $MN_OVR_RAPID_IS_GRAY_CODE (rapid traverse override switch gray-coded)<br><br>
+  <b>Axis-specific feedrate override</b><br>
+  An enable signal and a byte for the feedrate override factor are in the NC/PLC interface for each positioning axis.<br>
+  DB31, ... DBX1.7 (override effective)<br>
+  DB31, ... DBB0 (feedrate override)<br>
+  The override factor can be specified from the PLC either in the binary or gray-coded format.<br>
+  The format is communicated to the NC via the following machine data:<br>
+  MD12000 $MN_OVR_AX_IS_GRAY_CODE (axis feedrate override switch gray-coded)<br>
+  The following permanent assignment applies to binary code: DBB0 = 0 => 0% ... DBB0 = 200 => 200%<br>
+  With Gray coding, the override factors corresponding to the switch position must be entered in the machine data MD12010 $MN_OVR_ FACTOR_AX_ SPEED [n]<br><br>
+  <b>Spindle override</b><br>
+  One enable signal and one byte for the spindle override factor are available in the NC/PLC interface for each spindle.<br>
+  DB31, ... DBX1.7 (override effective)<br>
+  DB31, ... DBB19 (spindle override)<br>
+  The override factor can be specified from the PLC either in the binary or gray-coded format.<br>
+  The format is communicated to the NC via the machine data MD12060 $MN_OVR_SPIND_IS_GRAY_CODE (spindle override switch gray-coded)<br>
+  The following permanent assignment applies to binary code: DBB19 = 0 => 0% ... DBB0 = 200 => 200%<br>
+  With Gray coding, the override factors corresponding to the switch position must be entered in the machine data MD12070 $MN_OVR_FACTOR_SPIND_SPEED [n]<br><br>
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_5.png"></td>
+  <td valign="top"><b>Pulse Enable:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX21.7</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">Pulse enable:<br>
+  <b>1 = ON:</b> The pulses are enabled for the drive. The pulse enable is only performed in the drive when the drive signals readiness: DBax.DBX93.5 == 1 (feedback: Drive ready)<br>
+  <b>0 = OFF:</b> The pulses are disabled for the drive.<br>
+  If the pulse enable is removed during motion (e.g. emergency stop), the axis/spindle is no longer braked under control. The axis coasts to standstill.<br><br>
+  Corresponding to: <b>DBax.DBX93.5</b> (feedback: Drive ready); <b>DBax.DBX93.7</b> (feedback: Pulses are enabled)
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_6.png"></td>
+  <td valign="top"><b>Controller Enable:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX2.1</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">Controller enable:<br>
+  <b>1 = ON:</b> Controller is enabled.<br>
+  The position control loop is closed and the axis/spindle is in closed-loop control.<br>
+  Feedback: DBax.DBX61.5 = 1 (position controller active)<br>
+  If the axis/spindle was referenced before resetting the interface signal, the axis/spindle does not have to be re-referenced after the interface signal is set again. Supplementary condition: The limit frequency of the active measuring system must not be exceeded in the meantime.<br>
+  <i><b>Note</b><br>
+  If the axis/spindle was moved from its position during the time in which the controller enable was not set, the behavior when the controller enable is set depends on the interface signal "follow-up mode":<br>
+  - DBax.DBX1.4 == 1 (follow-up mode): The position control is implemented on the current position<br>
+  - DBax.DBX1.4 == 0 (no follow-up mode): The position control is made on the last position before the reset the controller enable</i><br><br>
+  <b>0 = OFF:</b> Controller is not enabled.<br><br>
+  The behavior when the "controller enable" is removed depends on whether the axis/spindle is stationary or traversing at this time:<br>
+  <b>- Axis/spindle stationary:</b><br>
+  - The position control loop of the axis is opened.<br>
+  - For DBax.DBX1.4 == 1 (follow-up mode) ⇒ position setpoint = actual position value<br>
+  - The controller enable on the drive is reset<br>
+  - The following interface signals are reset: DBax.DBX61.5 = 0 (position controller active); DBax.DBX61.6 = 0 (speed controller active); DBax.DBX61.7 = 0 (current controller active)<br>
+  <b>- Axis/spindle traverses</b><br>
+  - The axis is stopped with rapid stop.<br>
+  - Alarm 21612 "Controller enable VDI signal reset during motion".<br>
+  - The position control loop of the axis/spindle is opened.<br>
+  - Independent of the interface signal DBax.DBX1.4 (follow-up mode), the position setpoint is corrected at the end of the braking operation (position setpoint = actual position value) and the feedback signal DBax.DBX61.3 = 1 (follow-up mode) is set.<br>
+  - The following interface signals are reset: DBax.DBX61.5 (position controller active); DBax.DBX61.6 (speed controller active); DBax.DBX61.7 (current controller active)<br>
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_7.png"></td>
+  <td valign="top"><b>Feed Stop:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX4.3</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">Feedrate/spindle stop, axis-specific<br>
+  <b>0 = OFF:</b> Feedrate/spindle stop is not active.<br>
+  <b>1 = ON:</b> Feedrate/spindle stop is active.<br>
+  <br>
+  <b>Axis</b><br>
+  - If the interface signal is set while traversing the axis, then the axis is braked down to standstill along its braking characteristic. If the axis is in an interpolatory relationship with other axes, these are also braked.<br>
+  - After the interface signal has been reset, traversing motion that was stopped is continued.<br>
+  - The position control is retained and the following error is eliminated.<br>
+  - If the interface signal is set, and a request is issued to traverse, then the axis is not traversed. However, the traverse request is kept. When the interface signal is reset, the traverse request is immediately executed, i.e. the axis is traversed.<br>
+  - The interface signal is active in all modes.<br>
+  <b>Spindle</b><br>
+  - If the interface signal is set while traversing the spindle, then the spindle is braked down to standstill along its braking characteristic. If the spindle is in an interpolatory relationship with other spindles, these are also braked.<br>
+  - After the interface signal has been reset, traversing motion that was stopped is continued.<br>
+  - During positioning, the position control is retained and the following error is eliminated.<br>
+  - If the interface signal is set, and a request is issued to move during positioning operation, then the spindle is not moved. However, the traverse request is kept. When the interface signal is reset, the traverse request is immediately executed, i.e. the spindle is moved.<br>
+ - The interface signal is active in all modes.<br>
+  - The interface signal is not active during tapping (G331, G332).<br>
+  <br><b>Note:</b><br>
+  In usual mode, the 'Feedrate/spindle stop' signal is generated by FC10 (standard bloc from Siemens ToolBox Library) in the PLC program.<br>
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_8.png"></td>
+  <td valign="top"><b>Encoder 1 active:<br>Encoder 2 active:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX1.5<br>DBax.DBX1.6</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">Select active encoder...<br><br>
+  <b>Case 1: DBX1.5=0 DBX1.6 = 0:</b><br>
+  Position measuring systems 1 and 2 are inactive ("parking" of the machine axis):<br>
+  - There is no actual value acquisition.<br>
+  - The monitoring of the position measuring system has been deactivated.<br>
+  - The following interface signals are reset:<br>
+    – DB31, ... DBX60.4 / 5 == 0 (referenced/synchronized, encoder 1/2)<br>
+    – DB31, ... DBX61.5 (position controller active)<br>
+    – DB31, ... DBX61.6 (speed controller active)<br>
+    – DB31, ... DBX61.7 (current controller active)<br>
+  <br><br>
+  <b>Case 2: DBX1.5=1 DBX1.6 = 0:</b><br>
+  Position measuring system 1 is active:<br>
+  - Position control of the machine axis via position measuring system 1.<br>
+  - Monitoring functions (measuring system, standstill, clamping monitoring, contour deviation, etc.) of the machine axis via position measuring system 1.<br>
+  - If position measuring system 2 exists (MD30200 $MA_NUM_ENCS == 2), its actual position value is acquired, but not monitored by any of these functions.<br>
+  <br><br>
+  <b>Case 3: DBX1.5=0 DBX1.6 = 1:</b><br>
+  Position measuring system 2 is active:<br>
+  - Position control of the machine axis via position measuring system 2.<br>
+  - Monitoring functions (measuring system, standstill, clamping monitoring, contour deviation, etc.) of the machine axis via position measuring system 2.<br>
+  - If position measuring system 1 exists (MD30200 $MA_NUM_ENCS == 2), its actual position value is acquired, but not monitored by any of these functions.<br>
+  <br><br>
+  <b>Case 4: DBX1.5=1 DBX1.6 = 1:</b><br>
+  - Position control of the machine axis via position measuring system 1.<br>
+  - If position measuring system 2 is available (MD30200 $MA_NUM_ENCS == 2), its actual position value is also acquired.<br>
+  <br><br>
+  <b>Notes</b><br>
+  - If the interface signal of the active position measuring system is reset for a traversing axis, the axis is stopped with a ramp stop without the controller enable being cancelled internally.<br>
+  - If a speed-controlled spindle does not have a position measuring system, the "Controller enable" interface signal must be set: DB31, ... DBX2.1 == 1 (controller enable)<br>
+  - After deactivation of the "parking" state, incremental position measuring systems have to be referenced to achieve the "referenced" encoder status.<br>
+  - If the "parking" state is active, the following interface signal is ignored at NC start for this axis:<br>
+    DB31, ... DBX60.4 / 5 (referenced/synchronized 1/ 2).
+ </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_8.png"></td>
+  <td valign="top"><b>Encoder 1 referenced:<br>Encoder 2 referenced:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX60.4<br>DBax.DBX60.5</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">Encoder Referenced...<br><br>
+  <b>Encoder 1: DBX60.4:</b><br>
+  REF: Signal state 1: Position measuring system 1 of the machine axis is referenced/synchronized.<br>
+  N_Ref: Signal state 0: Position measuring system 1 of the machine axis is <b>not</b> referenced/synchronized.<br>
+  <b>Encoder 2: DBX60.5:</b><br>
+  REF: Signal state 1: Position measuring system 2 of the machine axis is referenced/synchronized.<br>
+  N_Ref: Signal state 0: Position measuring system 2 of the machine axis is <b>not</b> referenced/synchronized.<br>
+ </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_a.png"></td>
+  <td valign="top"><b>Traversing Key Disable:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX4.4</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">Traversing Keys Disable:<br>
+  <b>1 = ON:</b> The "Plus" and "Minus" traversing keys are locked.<br>
+  <b>0 = OFF:</b> The "Plus" and "Minus" traversing keys are enabled.<br>
+  <br>
+  Corresponding to: <b>DBax.DBX4.6 / DBax.DBX4.7</b> (traversing keys "Plus" / "Minus")<br>
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_b.png"></td>
+  <td valign="top"><b>Delete Distance to Go:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX2.2</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">Delete Distance to Go: [Del DTG]<br>
+  <b>Edge change 0->1: Axis:</b> "Delete-distance-to-go" is requested. <b>Spindle:</b> Reset is requested<br>
+  <b>Edge Change 1->0:</b> No effect.<br>
+  <br>
+  <b>Axis: Delete distance-to-go</b><br>
+  - AUTOMATIC and MDI modes<br>
+  The interface signal is only active if the axis is traversed as positioning axis. A positioning axis is decelerated to standstill along its brake characteristic. The DistanceToGo of the axis is deleted.<br>
+  - JOG mode<br>
+  The axis is braked down to standstill alone its deceleration characteristic and then a possible delete distance to go is a deleted.<br><br>
+  <b>Spindle: reset</b><br>
+  - <b><i>Control mode:</i></b><br>
+  --> The spindle is stopped<br>
+  --> The NC program is again executed<br>
+  --> The spindle continues to rotate with the next M and S value programmed in the NC program.<br>
+  - <i><b>Oscillation mode:</i></b><br>
+  --> Oscillation is interrupted<br>
+  --> The axes continue to traverse<br>
+  --> The NC program continues with the actual gear stage<br>
+  --> The spindle continues to rotate with the next M and S value programmed in the NC program. The speed obtained from these values (actual S value and the last active gear stage) could be too high. In this case, the interface signal is set. DBax.DBX83.1<br>
+  - <i><b>Positioning mode:</i></b> The spindle is stopped<br>
+  - <i><b>Axis mode:</i></b> The spindle is stopped<br>
+  <br><b>Note:</b><br>
+  The response for a spindle reset is independent of the setting in machine data: MD35040 $MA_SPIND_ACTIVE_AFTER_RESET<br><br>
+  Corresponding to: <br>
+  DBch.DBX6.2 (delete distance-to-go)<br>
+  DBax.DBX83.1 (programmed speed too high)<br>
+  MD35040 $MA_SPIND_ACTIVE_AFTER_RESET (own spindle reset)<br>
+  </td></tr>
+ <tr>
+  <td valign="top"><img src="images/area_840d_2_c.png"></td>
+  <td valign="top"><b>Hardware Limit Switches:</b><br>PLC->NC</td>
+  <td valign="top"><b>Limit -: DBax.DBX12.0<br>Limit +: DBax.DBX12.1</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">Hardware Limit Switch [Plus or Minus]:<br>
+  <b>1 = ON:</b> The hardware limit switch ("Plus" or "Minus") was activated.<br>
+  Alarm 21614 "Hardware limit switch -" is displayed, and the axis is stopped.<br>
+  resp.<br>
+  Alarm 21614 "Hardware limit switch +" is displayed, and the axis is stopped.<br>
+  <br>
+  <b>0 = OFF:</b> The hardware limit switch ("Plus" or "Minus") was not activated.<br>
+  <br>
+  Corresponding to: MD36600 $MA_BRAKE_MODE_CHOICE (deceleration behavior when the hardware limit switch responds)<br>
+  </td></tr>
+</tbody>
+</table>
+<br>
+<hr color="#004080" size="1">
+<br>
+<a id="axis2"> </a>
+<table border="1" cellpadding="3" cellspacing="3" width="100%"><tbody>
+  <tr>
+  <td valign="top"><b>Axis group 2:</b></td>
+  <td valign="top"> </td>
+  <td valign="top"> </td>
+  <td valign="top"> </td>
+  </tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_1.png"></td>
+  <td valign="top"><b>Axial Alarm</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX61.1</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON:</b> An axis-specific alarm is output. The axis is braked down to standstill along its deceleration characteristic. Status of the axis is transitioned into "Single axis alarm is active".<br>
+  <b>0 = OFF:</b> No axis-specific alarm.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_2.png"></td>
+  <td valign="top"><b>Axis Ready</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX61.2</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON:</b> The axis is ready.<br>
+  <b>0 = OFF:</b> The axis is <b>not</b> ready.<br><br>
+  The signal is processed on the NCU to which the drive of the axis connected. The axis is not ready, if, on this NCU an alarm with system response "NC ..." or "Mode group..." or "Channel not ready" is displayed, which involves this specific axis.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_3.png"></td>
+  <td valign="top"><b>Follow Up</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX61.3</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON:</b> The follow-up mode for the axis/spindle is active.<br>
+  Possible causes:<br>
+  - The controller enable for the drive has been withdrawn.<br>
+  --> DBax.DBX2.1 == 0 (controller enable)<br>
+  –-> in the control for faults; see under "Additional reference"<br>
+  - Follow-up mode was selected:<br>
+  –-> DBax.DBX1.4 == 1 (follow-up mode).<br>
+  –-> in the control, e.g. when withdrawing the controller enable for a traversing axis<br>
+  During the follow-up mode: position setpoint = actual position value<br>
+  <br><b>Note</b><br>
+  The standstill and clamping monitoring are not active.<br><br>
+  <b>0 = OFF:</b> The follow-up mode for the axis/spindle is not active. The standstill and clamping monitoring are active.<br><br>
+  <b>Note</b><br>
+  In the "Hold" state, the "Follow-up mode active" signal is not set.<br>
+  
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_4.png"></td>
+  <td valign="top"><b>Position Control ON/OFF</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX61.5</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON:</b> The position controller is active, i.e. the position control loop of the axis/spindle is closed.<br>
+  <b>0 = OFF:</b> The position controller is not active, i.e. the position control loop of the axis/spindle is not closed.<br>
+  The signal is reset if the controller enable (DBax.DBX2.1 == 0) is reset by the PLC user program, or as a result of an internal fault.<br>
+  <br><b>Additional information</b><br>
+  <b><i>Spindle without position control</i></b><br>
+  For a spindle without position control, the signal is always 0.<br>
+  <b><i>Spindle with position control</i></b><br>
+  For spindles with the option of position control, after activating the position control, e.g.using SPCON or M70, then the signal is handled the same as for a position-controlled axis.<br>
+  <b><i>Vertical axis</i></b><br>
+  For a vertical axis, the holding brake should be activated as soon as the position control is no longer active (DB31, ... DBX61.5 == 0).<br>
+  <b><i>Simulation axis</i></b><br>
+  The output of the signal can also be parameterized for a simulation axis: MD30350 $MA_SIMU_AX_VDI_OUTPUT = 1<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_5.png"></td>
+  <td valign="top"><b>Speed Control ON/OFF</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX61.6</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON: </b>The speed controller is active, i.e. the speed control loop of the axis/spindle is closed.<br>
+  <b>0 = OFF: </b>The speed controller is not active, i.e. the speed control loop of the axis is not closed. The speed controller output is cleared.<br>
+  <br><b>Additional information</b><br>
+  <b><i>Spindle without position control</i></b><br>
+  If the spindle is not under position control, the signal can be used as a feedback signal for signal DBax.DBX2.1 (controller enable).<br>
+  <b><i>Simulation axis</i></b><br>
+  The output of the signal can also be parameterized for a simulation axis: MD30350 $MA_SIMU_AX_VDI_OUTPUT = 1<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_6.png"></td>
+  <td valign="top"><b>Current Control ON/OFF</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX61.7</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON: </b>The current controller is active, i.e. the current control loop of the axis/spindle is closed.<br>
+  <b>0 = OFF: </b>The current controller is not active, i.e. the current control loop of the axis is not closed. The current controller output, including the injection variables on the control voltage, is cleared.<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_7a.png"></td>
+  <td valign="top"><b>Axis/spindle disable</b><br>PLC -> NC</td>
+  <td valign="top"><b>DBax.DBX1.3</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON: </b>Axis/spindle disable is requested.<br>
+  <b>0 = OFF: </b>There is no request for "axis / spindle disable".<br><br>
+  <b>Axis:</b><br>
+  - Effects with stationary axis:<br>
+  --> No setpoints are output to the position controller, i.e. the axis traversing movement is disabled. The axis is in closed-loop position control and any remaining following error is compensated.<br>
+  --> If the axis is traversed via an NC program or manually, the set position and set velocity are displayed as the actual position and actual velocity on the user interface. With channel reset or end of program (M30/M2), the display of the actual value is set to the actual value of the machine axis.<br>
+  --> The travel commands are output to the NC/PLC interface.<br>
+  - Effects with traversing axis:<br>
+  --> The axis is stopped in compliance with the currently active braking characteristic and an alarm is displayed. Subsequently, the travel movements of the axis are disabled. Position control remains active and holds the axis in the current position.<br>
+  <b>Spindle:</b><br>
+  - Effects with open-loop control mode and stationary spindle:<br>
+  --> No setpoints are output to the speed controller, i.e. the spindle traversing movement is disabled.<br>
+  --> If the spindle is traversed via an NC program or manually, the speed setpoint is displayed on the user interface as the speed actual value.<br>
+  - Effects with open-loop control mode and rotating spindle:<br>
+  --> Speed setpoint zero is immediately output to the speed controller.<br>
+  --> The spindle is stopped in compliance with the currently active braking characteristic and an alarm is displayed. Subsequently, the travel movements of the spindle are disabled. Position control remains active and holds the axis in the current position.<br>
+  - Effects with positioning mode: See Stationary axis / Traversing axis<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_7b.png"></td>
+  <td valign="top"><b>Axis/spindle disable is active</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX63.3</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON: </b>Axis/spindle disable is active.<br>
+  <b>0 = OFF: </b>Axis/spindle disable is <b>not</b> active.<br><br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_8.png"></td>
+  <td valign="top"><b>PLC-controlled axis</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX63.1</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON: </b>Axis control is transferred to the PLC.<br>
+  <b>0 = OFF: </b>The axis is controlled by the NC.<br><br>
+  Corresponds with DBax.DBX28.7 (request, PLC-controlled axis)
+</td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_9.png"></td>
+  <td valign="top"><b>Active Handwheel</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX64.0...64.2</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  Number of active Handwheel<br>
+  <br>
+  MD11324 = 0:<br>
+  <table border="1" cellpadding="3" cellspacing="0" valign = "top" align = "middle"><tbody>
+  <tr>
+  <td>DBax.DBX64.2</td><td>DBax.DBX64.1</td><td>DBax.DBX64.0</td><td>Handwheel</td>
+  </tr><tr>
+  <td>0</td><td>0</td><td>0</td><td>NO Handwheel active</td>
+  </tr><tr>
+  <td>0</td><td>0</td><td>1</td><td>Handwheel 1 active</td>
+  </tr><tr>
+  <td>0</td><td>1</td><td>0</td><td>Handwheel 2 active</td>
+  </tr><tr>
+  <td>1</td><td>0</td><td>0</td><td>Handwheel 3 active</td>
+  </tr>
+  </tbody></table>
+  <br>
+  MD11324 = 1:<br>
+  <table border="1" cellpadding="3" cellspacing="0" valign = "top" align = "middle"><tbody>
+  <tr>
+  <td>DBax.DBX64.2</td><td>DBax.DBX64.1</td><td>DBax.DBX64.0</td><td>Handwheel</td>
+  </tr><tr>
+  <td>0</td><td>0</td><td>0</td><td>NO Handwheel active</td>
+  </tr><tr>
+  <td>0</td><td>0</td><td>1</td><td>Handwheel 1 active</td>
+  </tr><tr>
+  <td>0</td><td>1</td><td>0</td><td>Handwheel 2 active</td>
+  </tr><tr>
+  <td>0</td><td>1</td><td>1</td><td>Handwheel 3 active</td>
+  </tr><tr>
+  <td>1</td><td>0</td><td>0</td><td>Handwheel 4 active</td>
+  </tr><tr>
+  <td>1</td><td>0</td><td>1</td><td>Handwheel 5 active</td>
+  </tr><tr>
+  <td>1</td><td>1</td><td>0</td><td>Handwheel 6 active</td>
+  </tr>
+  </tbody></table>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_a.png"></td>
+  <td valign="top"><b>Traversing request "Plus" / "Minus"</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX64.4<br>DBax.DBX64.5</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON:</b> There is a traversing request for the machine axis.<br>
+  <b>0 = OFF:</b> There is no traversing request for the machine axis.<br><br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_3_b.png"></td>
+  <td valign="top"><b>Traversing command "Plus" / "Minus"</b><br>NC -> PLC</td>
+  <td valign="top"><b>DBax.DBX64.6<br>DBax.DBX64.7</b><br><br>DBax = DB[30 + Axis Number]<br>Example: DB31 = Axis 1</td>
+  <td valign="top">
+  <b>1 = ON:</b> A travel command is pending for the machine axis<br>
+  <b>0 = OFF:</b> No travel command is pending for the machine axis<br><br>
+  The travel command is output depending on MD17900 $MN_VDI_FUNCTION_MASK, bit 0.
+  </td></tr>
+</tbody>
+</table>
+<br>
+<hr color="#004080" size="1">
+<br>
+<a id="safety"> </a>
+<table border="1" cellpadding="3" cellspacing="3" width="100%"><tbody>
+  <tr>
+  <td valign="top"><b>Axis Safety:</b></td>
+  <td valign="top"> </td>
+  <td valign="top"> </td>
+  <td valign="top"> </td>
+  </tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_1.png"></td>
+  <td valign="top"><b>Safety Mode:</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX70.4<br>DBax.DBX70.5</b></td>
+  <td valign="top">Safety Mode for axis:<br>
+  DBax.DBX70.4 = 1: NC Safety Integrated Active (Safety Integrated 'Classic')<br>
+  DBax.DBX70.5 = 1: DRV Safety Integrated active with SIC/SCC (Safety Integrated 'Plus' with PLC S7-F Failsafe and Safety Integrated from Drives)<br>
+  <br><b>Note:</b><br>
+  <i>Monitor5, in version 20.xx.xx is monitoring only the Signal for Safety Integrated 'Classic'</i>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_2a.png"></td>
+  <td valign="top"><b>SBH Request:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX22.0<br>DBax.DBX22.1</b></td>
+  <td valign="top"><b>SBH deselection</b><br>
+  <i>SBH - Sicherer Betriebshalt = SOS - Safe Operating Stop<br>
+        SG - sichere geschwindigkeit = SLS - Safe Limited Speed</i><br><br>
+  <b>DBax.DBX22.0 = SBH/SG deselection</b> <br>
+  <b>DBax.DBX22.1 = SBH deselection</b> <br><br>
+  <table border="1" cellpadding="3" cellspacing="0" valign = "top" align = "middle"><tbody>
+  <tr>
+  <td>Bit:</td><td>SBH [SOS] SELECTED</td><td>SG [SLS] SELECTED</td><td>NO SBH or SG Selected</td><td>NO SBH or SG Selected</td>
+  </tr><tr>
+  <td>DBax.DBX22.0</td><td>0</td><td>0</td><td>1</td><td>1</td>
+  </tr><tr>
+  <td>DBax.DBX22.1</td><td>0</td><td>1</td><td>0</td><td>1</td>
+  </tr>
+  </tbody></table>
+  
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_2b.png"></td>
+  <td valign="top"><b>SOS Status:</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX108.0</b></td>
+  <td valign="top">SBH [Sichere Betriebs Halt = Safe Operating Stop / SOS] is Active<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_3a.png"></td>
+  <td valign="top"><b>SG Request:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX22.0<br>DBax.DBX22.1</b></td>
+  <td valign="top"><b>SG deselection</b><br>
+  <i>SBH - Sicherer Betriebshalt = SOS - Safe Operating Stop<br>
+        SG - Sichere Geschwindigkeit = SLS - Safe Limited Speed</i><br><br>
+  <b>DBax.DBX22.0 = SBH/SG deselection</b> <br>
+  <b>DBax.DBX22.1 = SBH deselection</b> <br><br>
+  <table border="1" cellpadding="3" cellspacing="0" valign = "top" align = "middle"><tbody>
+  <tr>
+  <td>Bit:</td><td>SBH [SOS] SELECTED</td><td>SG [SLS] SELECTED</td><td>NO SBH or SG Selected</td><td>NO SBH or SG Selected</td>
+  </tr><tr>
+  <td>DBax.DBX22.0</td><td>0</td><td>0</td><td>1</td><td>1</td>
+  </tr><tr>
+  <td>DBax.DBX22.1</td><td>0</td><td>1</td><td>0</td><td>1</td>
+  </tr>
+  </tbody></table>
+  
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_3b.png"></td>
+  <td valign="top"><b>SLS Status:</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX110.1</b></td>
+  <td valign="top">SG [Sichere Geschwindigkeit = SLS - Safe Limited Speed] is Active<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_4a.png"></td>
+  <td valign="top"><b>SG Stage:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX22.3<br>DBax.DBX22.4</b></td>
+  <td valign="top"><b>SG Stage Request:</b><br>
+  <i>SG - Sichere Geschwindigkeit = SLS - Safe Limited Speed</i><br><br>
+  <table border="1" cellpadding="3" cellspacing="0" valign = "top" align = "middle"><tbody>
+  <tr>
+  <td>Bit:</td><td>SG Stage 1</td><td>SG Stage 2</td><td>SG Stage 3</td><td>SG Stage 4</td>
+  </tr><tr>
+  <td>DBax.DBX22.3</td><td>0</td><td>1</td><td>0</td><td>1</td>
+  </tr><tr>
+  <td>DBax.DBX22.4</td><td>0</td><td>0</td><td>1</td><td>1</td>
+  </tr>
+  </tbody></table>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_4b.png"></td>
+  <td valign="top"><b>SG Stage:</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX110.3<br>DBax.DBX110.4</b></td>
+  <td valign="top"><b>Actual SG Stage:</b><br>
+  <i>SG - Sichere Geschwindigkeit = SLS - Safe Limited Speed</i><br><br>
+  <table border="1" cellpadding="3" cellspacing="0" valign = "top" align = "middle"><tbody>
+  <tr>
+  <td>Bit:</td><td>SG Stage 1</td><td>SG Stage 2</td><td>SG Stage 3</td><td>SG Stage 4</td>
+  </tr><tr>
+  <td>DBax.DBX110.3</td><td>0</td><td>1</td><td>0</td><td>1</td>
+  </tr><tr>
+  <td>DBax.DBX110.4</td><td>0</td><td>0</td><td>1</td><td>1</td>
+  </tr>
+  </tbody></table>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_5a.png"></td>
+  <td valign="top"><b>STOP A Request:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX32.2</b></td>
+  <td valign="top"><b>STOP A Requested</b><br><br>
+  "Pulse cancellation" can be requested and executed using this SGE.<br>
+  The safe functions currently active (SG/SBH/SN/SE) are not influenced by this SGE.<br>
+  If one of the currently active limits is violated, an appropriate alarm is initiated. The associated shutdown response cannot be activated because the pulses have already been cancelled. As soon as the stop request is cancelled via the SGE "deselect ext. STOP A" any queued shutdown responses become active.<br>
+  If a stop request is active, SGA "STOP A/B is active" is set in the same way as it would be for an internally triggered STOP A.<br><br>
+  0 signal: "Pulse cancellation" is requested<br>
+  1 signal: "Pulse cancellation" is not requested
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_5b.png"></td>
+  <td valign="top"><b>STOP A Active:</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX111.4</b></td>
+  <td valign="top"><b>STOP A is Active</b><br>
+  This signal indicates that STOP A/B is active.The signal must be used for the forced checking procedure for external STOPs.<br>
+  0 signal: STOP A/B is not active<br>
+  1 signal: STOP A/B is active<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_6a.png"></td>
+  <td valign="top"><b>STOP C Request:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX32.3</b></td>
+  <td valign="top"><b>STOP C Requested</b><br><br>
+  This SGE requests "braking with nset = 0" (braking along the OFF3 down ramp).<br>
+  When this stopping type is initiated, the safe monitoring of the acceleration (SBR) is activated. In addition, the timer set using MD36952/p9552: $MA_SAFE_STOP_SWITCH_TIME_C / "SI Motion transition time STOP C to SBH" is started.<br>
+  After this time has elapsed, the system automatically changes over to SBH.<br>
+  If a stop request is active, SGA "STOP C is active" is set in the same way as it would be for an internally triggered STOP C.<br><br>
+  0 signal: "Braking with nset = 0" is requested<br>
+  1 signal: No request for "Braking with nset = 0"<br>
+  <br>Note<br>
+  Stopping with an external STOP A (pulse cancellation) has a higher priority and can interrupt an external STOP C (braking along the OFF3 down ramp).
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_6b.png"></td>
+  <td valign="top"><b>STOP C Active:</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX111.5</b></td>
+  <td valign="top"><b>STOP C is Active</b><br>
+  This signal indicates that STOP C is active.The signal must be used for the forced checking procedure for external STOPs.<br>
+  0 signal: STOP C is not active<br>
+  1 signal: STOP C is active<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_7a.png"></td>
+  <td valign="top"><b>STOP D Request:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX32.4</b></td>
+  <td valign="top"><b>STOP D Requested</b><br><br>
+  "Braking along a path" can be requested using this SGE.<br>
+  When ext. STOP D is triggered, the timer set using MD36953/p9553 $MA_SAFE_STOP_SWITCH_TIME_D / "SI Motion transition time STOP D to SBH" is started.<br>
+  After this time has elapsed, the system automatically changes over to SBH.<br>
+  If a stop request is active, SGA "STOP D is active" is set in the same way as it would be for an internally triggered STOP D.<br><br>
+  0 signal: "Braking along a path" is requested<br>
+  1 signal: No request for "Braking along a path"<br>
+  <br>Note<br>
+  Stopping with an external STOP A (pulse cancellation) and/or external STOP C (braking along the OFF3 down ramp) has a higher priority and can interrupt an external STOP D (braking along a path).
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_7b.png"></td>
+  <td valign="top"><b>STOP D Active:</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX111.6</b></td>
+  <td valign="top"><b>STOP D is Active</b><br>
+  This signal indicates that STOP D is active.The signal must be used for the forced checking procedure for external STOPs.<br>
+  0 signal: STOP D is not active<br>
+  1 signal: STOP D is active<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_8a.png"></td>
+  <td valign="top"><b>STOP E Request:</b><br>PLC->NC</td>
+  <td valign="top"><b>DBax.DBX32.5</b></td>
+  <td valign="top"><b>STOP E Requested</b><br>
+  This SGE can be used to request a stop via the function "extended stopping and retraction" (ESR).<br>
+  When an external STOP E is initiated the timer set using MD36954: $MA_SAFE_STOP_SWITCH_TIME_E / p9554: Timer set for "SI Motion transition time STOP E to SBH" is started.<br>
+  After this time has elapsed, the system automatically changes over to SBH.<br>
+  If a stop request is active, SGA "STOP E is active" is set in the same way as it would be for an internally triggered STOP E.<br>
+  <br>
+  0 signal: "Stop/retraction" is requested<br>
+  1 signal: "Stop/retract" is not requested<br>
+  <br>Note<br>
+  Stopping with an external STOP A (pulse cancellation) and/or external STOP C (braking along the OFF3 down ramp) and/or ext. STOP D (braking along a path) has/have a higher priority and can interrupt an external STOP E.<br><br>
+  STOP E only produces a different response than STOP D if the user has configured the ESR function - extended stop and retract - and initiation of the ESR is programmed depending on $VA_STOPSI or $A_STOPESI. If no ESR is active, the STOP E behaves like a STOP D. However, if the ESR was incorrectly configured, there is a delay up to the time $MC_ESR_DELAY_TIME1 and $MC_ESR_DELAY_TIME2 compared to STOP D until the braking operation is initiated.<br>
+  After these times have expired, braking is initiated at the current limit.
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_8b.png"></td>
+  <td valign="top"><b>STOP E Active:</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX111.7</b></td>
+  <td valign="top"><b>STOP E is Active</b><br>
+  This signal indicates that STOP E is active.The signal must be used for the forced checking procedure for external STOPs.<br>
+  0 signal: STOP E is not active<br>
+  1 signal: STOP E is active<br>
+  </td></tr>
+  <tr>
+  <td valign="top"><img src="images/area_840d_4_9.png"></td>
+  <td valign="top"><b>Pulses are Enabled</b><br>NC->PLC</td>
+  <td valign="top"><b>DBax.DBX108.2</b></td>
+  <td valign="top"><b>Pulses are Enabled [from Safety]</b><br>
+  </td></tr>
+</tbody>
+</table>
+<br>
+<hr color="#004080" size="2">
+</body></html>

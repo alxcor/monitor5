@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+<head><title>Monitor 5 Help</title>
+<meta name="keywords" content="Sinumerik online monitoring, Sinumerik 840D remote diagnosis, Sitrain simulator, Step7 scope monitoring, Totally Integrated Automation, MCP Machine Control Panel Simulation, Virtual MCP, Virtual Machine Control Panel">
+<meta name="description" content="Online monitoring and service for Sinumerik 840D Solution Line, Sinamics S120 or Step7 systems">
+  <style>
+   * {
+    box-sizing: border-box;
+   }
+/* Logo */
+   .para1 {
+   margin-top: 5px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 14px;
+   line-height: 10px;
+   text-align: right;
+   color: #004080; }
+   .para2 { 
+   margin-top: 10px;
+   margin-left:  15px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 50px;
+   line-height: 50px;
+   text-align: left;
+   color: #303050; }
+   .para3 {
+   margin-top: -20px;
+   margin-left: 240px;
+   margin-right: 10px;
+   font-family: Arial;
+   font-size: 40px;
+   line-height: 35px;
+   text-align: left;
+   color: #90909F; }
+/* Bara Meniu */
+   ul.menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00000F;}
+   ul.menubar li {float: left;}
+   ul.menubar li a {
+    display: block;
+    color: #F4F4FF;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;}
+   ul.menubar li a.active {background-color: #004080;}
+   ul.menubar li.right {float: right;}
+   u1.menubar.li.dropdown {float: left; overflow: hidden;}
+   .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #F4F4FF;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;}
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #90909F;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;}
+   .dropdown-content a {
+    float: none;
+    color: #F4F4FF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;}
+   .dropdown:hover .dropdown-content {
+    display: block;}
+   .menubar a:hover, .dropdown:hover .dropbtn .dropdown-content a:hover{
+    background-color: #404040;
+   }
+   @media screen and (max-width:600px){
+    ul.menubar li, ul.menubar li.right {float: none;}
+   }
+  </style>
+</head>
+<!-- START BODY ... -->
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<!-- START Header Area ... -->
+<a name="#top"> </a>
+<div class="para1" align="center">20.05.14; Mai.2020</div>
+<div class="para2" align="center"><b>Monitor 5</b></div>
+<div class="para3" align="center"><b>help</b></div>
+<!-- hr color="#004080" size="2" -->
+<!-- END Header Area ... -->
+<!-- START Menu Bar ... -->
+<ul class="menubar">
+  <li><a href="http://monitor5.000webhostapp.com/index_ro.html">Acasa</a></li>
+  <li><a class="active" href="index_ro.html">Monitor5</a></li>
+  <li><a href="download/Monitor5.zip">Download</a></li>
+  <li><div class="dropdown">
+   <button class="dropbtn">Ajutor pentru...</button>
+   <div class="dropdown-content">
+    <a href="connection_ro.html">Conectare</a>
+    <a href="area_840d_ro.html">Aria 840D</a>
+    <a href="area_840d_func_ro.html">Aria 840D Func</a>
+    <a href="area_sinamics_ro.html">Aria Sinamics</a>
+    <a href="area_graph_ro.html">Aria Graph</a>
+    </div>
+  </div>
+  </li>
+  <li class="right">
+    <a href="index.html">English</a>
+  </li>
+</ul>
+<!-- END Menu Bar ... -->
+<img alt="Monitor5" title="Screen Overview" src="images/head.png" style="width:100%; height:auto">
+<hr color="#004080" size="1">
+<b>Descriere</b><br>
+
+'Monitor5' poate fi utilizat pentru diagnoza sistemelor Sinumerik 840D, Sinamics sau Step7 conectabile prin Ethernet.<br>
+Nu este necesara instalarea programului, acesta este portabil iar toate datele si setarile sunt salvate in fisiere .INI in directorul propriu.<br>
+Pentru 'dezinstalare' este suficient sa stergeti intreg directorul in care ati salvat programul.<br>
+<br>
+Monitor5 utilizeaza Snap7 sub <a href="http://www.gnu.org/licenses/lgpl-3.0.html">Licenta LGPL3</a> pentru a stabili comunicatia cu echipamentul Sinumerik/Sinamics/Step7.
+<br>
+<br>
+Monitor5 utilizeaza <a href="qt.io">Qt</a> sub <a href="http://www.gnu.org/licenses/lgpl-3.0.html">Licenta LGPL3</a>.
+<hr color="#004080" size="1"> <br>
+<b><a href="area_840d_ro.html">TAB 840D:</a> Pentru Sinumerik 840D (sl):</b><br>
+Monitor5 poate fi utilizat pentru:<br>
+- monitorizarea celor mai importante semnale de permitere a deplasarii unei axe.<br>
+- calcularea bitului din DB2 corespunzator unui anumit numar de alarma OEM<br>
+- calcularea numarului de alarma OEM pentru un anumit bit din DB2<br>
+- monitorizare / modificare stare bit corespunzator unei alarme OEM<br>
+- calcularea numarului bitului din DB21...DB30 corespunzator decodificarii (quick decode) unei functii M<br>
+- calcularea numarului functiei M corespunzatoare unui anume bit din DB21...DB30<br>
+- monitorizare / modificare stare bit corespunzator decodificarii (quick decode) unei functii M<br>
+- calcularea bitilor din DB10 corespunzatori unei intrari rapide NCK<br>
+<br><br>
+<b><a href="area_840d_func.html">TAB 840D Funct:</a> Pentru Sinumerik 840D (sl):</b><br>
+Monitor5 poate fi utilizat pentru:<br>
+- monitorizarea si inregistrarea tuturor functiilor M (Miscellaneous), S (Spindle Speed / Turatii actionare principala), T (Tool / Scule), D (taisuri pentru o scula) sau H (ca valoare de tip Integer sau Real) emise dintr-un Program Piesa catre PLC.<br>
+Sunt disponibile doua ferestre astfel incat este posibila monitorizarea simultana a doua tipuri de functii (de exemplu functii T si D) din acelasi Canal sau din Canale diferite ale NC.<br>
+<br><br>
+<b><a href="area_sinamics.html">TAB SINAMICS:</a> Pentru Sinamics S sau G cu interfata Ethernet:</b><br>
+Monitor5 poate fi utilizat pentru:<br>
+- monitorizarea celor mai importante semnale de permitere pentru controlul unei actionari / unui motor.<br>
+- monitorizarea si inregistrarea Mesajelor si Alarmelor unei actionari<br>
+- afisarea informatiilor din fisierul de Ajutor / Help pentru o anumita Alarma sau un anumit Mesaj Sinamics<br>
+- monitorizarea / modificarea online a valorii unui parametru oarecare<br>
+<br><br>
+<b><a href="area_graph.html">TAB Step7:</a> Pentru o unitate centrala de tip Step7/Sinumerik CPU sau Sinamics CU unit cu interfata Ethernet:</b><br>
+Monitor5 poate fi utilizat pentru:<br>
+- monitorizarea/modificarea valorilor unui numar de variabile (I, Q, M, DB (doar DB-uri neoptimizate).<br>
+- afisarea unui Grafic cu valorile variabilelor monitorizate<br>
+
+<hr color="#004080" size="2">
+</body></html>
