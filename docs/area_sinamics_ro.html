@@ -109,7 +109,6 @@
 <!-- END Header Area ... -->
 <!-- START Menu Bar ... -->
 <ul class="menubar">
-  <li><a href="http://monitor5.000webhostapp.com/index_ro.html">Acasa</a></li>
   <li><a class="active" href="index_ro.html">Monitor5</a></li>
   <li><a href="download/Monitor5.zip">Download</a></li>
   <li><a href="area_sinamics.html">English</a></li>
@@ -126,7 +125,94 @@
 </ul>
 <!-- END SubMenu Bar ... -->
 <h1>Aria Sinamics</h1>
+<!-- START SubMenu2 Bar ... -->
+<ul class="menubar" style="background-color: #004080">
+    <li><a href="#settings">Setari</a></li>
+    <li><a href="#objnum">Numar Obiect / Object Number</a></li>
+    <li><a href="#status">Stare</a></li>
+</ul>
+<!-- END SubMenu2 Bar ... -->
 <hr color="#004080" size="1">
+<a id="settings"><b>Conexiuni, Interfete:</b></a><br>
+<div class="rand">
+ <div class="coloana">
+  <img alt="Interfete Sinamics" src="images/area_s120_ig.png" style="max-width:444px; width:75%">
+ </div>
+ <div class="coloana" style="float:none">
+  <b>G120:</b><br>
+  Localizati interfata Profinet<br>
+  Este posibil sa aveti nevoie de un alt software pentru a gasi adresa Ehernet a modulului (Starter, StartDrive, TIA Portal, etc).<br>
+  Rack: 0<br>
+  Slot: oricare<br>
+ </div>
+</div>
+<div class="rand">
+ <div class="coloana">
+  <img alt="Interfete Sinamics" src="images/area_s120_is.png" style="max-width:444px; width:75%">
+ </div>
+ <div class="coloana" style="float:none">
+  <b>S120:</b><br>
+  Puteti utiliza interfata X127 (Ethernet Service Interface) sau orice interfata Profinet disponibila<br>
+  Este posibil sa aveti nevoie de un alt software pentru a gasi adresa Ehernet a modulului (Starter, StartDrive, TIA Portal, etc).<br>
+  Rack: 0<br>
+  Slot: oricare<br>
+ </div>
+</div>
+<hr color="#004080" size="1">
+<a id="objnum"><b>Numar Obiect / Object number:</b></a><br><br>
+<div class="rand">
+ <div class="coloana">
+  <img alt="G120" src="images/area_s120_g120.png" style="max-width:444px; width:75%">
+ </div>
+ <div>
+  Pentru actionarile mono-axa (precum Sinamics G120, G120D, G120C, G120X, etc.) numarul obiectului nu este relevant.<br>
+  Unitatea de Control este montata pe modulul de forta (Power Module) si impreuna formeaza un Obiect de Actionare: un sistem cu capabilitatea de a controla motorul, salva parametrii, a primi comenzi, etc.
+ </div>
+</div>
+<div class="rand">
+ <div class="coloana">
+  <img alt="S120" src="images/area_s120_s120.png" style="max-width:444px; width:75%">
+ </div>
+ <div>
+  Sistemele de actionari cu arhitectura modulara, precum Sinamics S120, au o arhitectura complexa.<br>
+  Diversele componente sunt conectate intre ele, prin intermediul barelor de Curent Continuu si prin intermediul interfetei de sistem Drive-Cliq, pentru a controla unul sau mai multe motoare.<br>
+  In acest mod, motorul nu mai este controlat de un singur echipament hardware, ca in cazul sistemelor mono-drive ('Single Drive'), pentru a controla motorul sunt necesare mai multe componente conectate intre ele.<br><br>
+  Exemplu:<br>
+  in imaginea din stanga este reprezentat un sistem modular ce controleaza 3 motoare.<br>
+  - primul modul (cel mic, din stanga) este Unitatea de Control (Control Unit)<br>
+  - al 2-lea modul este Modulul de Linie (Line Module): un redresor ce transforma curentul alternativ de la retea in curent continuu.<br>
+  - al 3-lea modul este un Modul Dublu de Motor (Double Motor Module): doua convertizoare ce moduleaza curentul continuu venit pe barele circuitului intermediar de la modulul redresor (Line Module) in curent alternativ pentru controlul motoarelor.<br>
+  - al 4-lea modul este un Modul pentru un Motor (Single Motor Module): un convertizor ce moduleaza curentul continuu venit pe barele circuitului intermediar de la modulul redresor (Line Module) in curent alternativ pentru controlul motorului.<br>
+ </div>
+</div>
+<div class="rand">
+ <div class="coloana">
+  <img alt="S120" src="images/area_s120_s121.png" style="max-width:444px; width:75%">
+ </div>
+ <div>
+  <b>(1)</b> In sistemele Sinamics S120, Unitatea de Control (Control Unit) este considerata un Obiect de Actionare (Drive Object). <br>In exemplul nostru va fi primul Obiect.<br>
+  <br>
+  <b>(2)</b> Intr-un sistem modular este nevoie de un modul redresor. Unele redresoare, precum "Active Line Module" au parametri si sunt considerate Obiecte de Actionari in sistem.<br>In exemplul nostru modulul Active Line Module (redresorul) este al 2-lea Obiect.<br>
+  <br>
+  <b>(3)</b> si <b>(4)</b> Un modul de motor dublu (Double Motor Module) are doua punti invertoare independente, fiecare capabila sa controleze tensiunea de curent alternativ pentru un motor. Fiecare invertor are proprii parametri si, impreuna cu motorul si electronica necesara pentru encoder (de exemplu un Sensor Module) formeaza cate un Obiect de Actionari.<br>In exemplul nostru, Obiectul <b>(3)</b> este format din primul invertor al Modulului Duble, primul motor si eventual electronica necesara pentru encoder.<br>
+  Obiectul <b>(4)</b> este format din al doilea invertor al Modulului Dublu, al doilea motor si eventual electronica necesara pentru encoder.<br>
+  <br>
+  <b>(5)</b> Obiectul de Actionari <b>(5)</b> este format din ultimul Modul de Motor, ultimul motor si eventual electronica necesara pentru encoder.<br>
+ </div>
+</div>
+<hr color="#004080" size="1">
+<a id="status"> </a>
+<div class="rand">
+ <div class="coloana">
+  <img alt="Drive Object" src="images/area_s120_1a.png" style="max-width:444px; width:75%">
+ </div>
+ <div>
+  <b>Selectie Obiect de Actionari</b><br>
+  Selectati numarul Obiectului de Actionari.<br>
+  Valoarea parametrului r975.1, Drive Object Identification, este afisata in linia de sub numarul Obiectului de Actionari.
+ </div>
+</div>
+<br><br>
 
 <hr color="#004080" size="2">
 </body></html>
