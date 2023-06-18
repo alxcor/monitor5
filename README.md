@@ -9,7 +9,7 @@ Sinumerik and Sinamics monitor, Step7 scope
 - Step7 mini osciloscope
 
 
-Project build on Qt5, using Snap7 (by Davide Nardella).
+Project build on Qt5, using Snap7.
 
 Provides axis monitoring for Sinumerik 840Dsl, drive monitoring for Sinamics G110, G120, S110, S120 drives
 
